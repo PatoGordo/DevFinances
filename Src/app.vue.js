@@ -4,9 +4,12 @@ const app = new Vue({
 	data: {
 
 	},
+	created(){
+		
+	},
 	template: `
 		<div id="app">
-			<app-navbar /><!-- Component from: Src/Components/navbar.vue.js -->
+			<!--app-navbar /><!-- Component from: Src/Components/navbar.vue.js -->
 			<router-view></router-view>
 		</div>
 	`

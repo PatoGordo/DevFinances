@@ -1,0 +1,121 @@
+// Only colors and transitions
+body{
+	// Light Theme(default)
+	transition: all ease .5s;
+	color: #24292e;
+	background: #e8edf5;
+	a{
+		color: rgba(7, 226, 120, 0.7);
+		transition: all ease .3s;
+		&:hover{
+			color: rgba(7, 226, 120, 1);
+			transition: all ease .3s;
+		}
+	}
+	button{
+		background: transparent;
+	}
+	.balance h2{
+		color: #fff;
+	}
+	.card{
+		background: #fff;
+		transition: all ease .3s;
+		&.total{
+			background: rgba(0,230,118,1);
+			color: #fff;
+		}
+		h3 .card-icon{
+			&.up{
+				color: rgba(0, 230, 119, .7);
+			}
+			&.down{
+				color: #fd6044;
+			}
+			&.total{
+				color: #ffffff;
+			}
+		}
+	}
+	header{
+		background: rgba(92,107,192,1);
+		color: #fff;
+		.toggler .header-icon{
+			color: rgba(255,224,130,1);
+			transition: all ease .3s;
+			&#sun{
+				color: rgba(255,213,79,1);
+				transition: all ease .3s;
+			}
+			&#moon{
+				color: rgba(255,224,130,1);
+				transition: all ease .3s;
+			}
+		}
+	}
+	.data-table {
+		color: #969cb3;
+		th, td{
+			background: #fff;
+		}
+		td{
+			&.description{
+				color: @darkBlue;
+			}
+			&.income{
+				color: rgb(39, 225, 135);
+			}
+			&.expense{
+				color: #fa320f;
+			}
+			.transaction-icon{
+				color: #fa320f
+			}
+		}
+	}
+	footer{
+		color: @darkBlue;
+	}
+
+
+	// Dark Theme
+	&.dark{
+		transition: all ease .5s;
+		color: #c9d1d9;
+		background: #0d1117;
+		button{
+			background: #21262d;
+		}
+		.card{
+			background: #21262d;
+			transition: all ease .3s;
+			&.total{
+				background: rgba(0, 230, 119, .7);
+				color: #fff;
+			}
+		}
+		header{
+			background: #161b22;	
+		}
+		.data-table {
+			color: #c9d1d9;
+			th, td{
+				background: #21262d;
+			}
+			td{
+				&.description{
+					color: rgb(255, 255, 255);
+				}
+				&.income{
+					color: rgba(105,240,174,1);
+				}
+				&.expense{
+					color: #fd6044;
+				}
+			}
+		}
+		footer{
+			color: #c9d1d9;
+		}
+	}
+}
