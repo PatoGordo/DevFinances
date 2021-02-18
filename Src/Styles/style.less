@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('Components/navbar.less');
+@import url('variables.less');
+
+
+/* Preset */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+	font-family: 'Montserrat', sans-serif;
+	list-style: none;
+	text-decoration: none;
+}
+body{
+	width: 100%;
+	height: 100%;
+}
+#app{
+	width: 100%;
+	height: 100%;
+}
+.component{
+	width: 100%;
+	height: 100%;
+	.flex-coll-center-center()
+}
+button, a, input, label{
+	.romove-user-select()
+}
+textarea {
+  resize: none;
+}
+h1, h2{
+	font-weight: 400;
+}
+h2{
+	margin-right: auto;
+}

@@ -1,0 +1,39 @@
+.navbar{
+	height: 80px;
+	padding: 0 60px 0 60px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	background: @bgcolor;
+	@media screen and (max-width: 960px){
+		padding: 0;
+	}
+}
+.navbar-item{
+	margin: 20px;
+	color: #fff;
+	padding: 10px;
+	@media screen and (max-width: 960px){
+		margin: 10px;
+	}
+	&:hover{
+		border-bottom: 1px solid rgba(149, 117, 205, 0.8);
+	}
+}
+.navbar-item.title{
+	font-size: 20px;
+	margin-right: auto;
+	text-align: center;
+	@media screen and (max-width: 960px){
+		font-size: 18px;
+	}
+	&:hover{
+		border: 0;
+	}
+	&:hover{
+		background: transparent;
+		border-radius: 0;
+		transition: 0;
+	}
+}
