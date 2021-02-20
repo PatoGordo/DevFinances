@@ -85,6 +85,12 @@ const Home = Vue.component('Home', {
 			</section>
 		</main>
 		<dk-modal />
+		<div class="button-div">
+			<button class="add-button">
+				<ion-icon class="icon-button"></ion-icon>
+				Instalar aplicativo
+			</button>
+		</div>
 		<footer>Dev Finances, by: <a href="https://github.com/patogordo" target="_blank">Pato Gordo</a></footer>
 	</div>`
 })

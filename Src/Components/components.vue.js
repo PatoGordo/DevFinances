@@ -80,3 +80,30 @@ Vue.component('dk-modal', {
 	</div>
 	`
 })
+
+Vue.component('dk-modal-pwa', {
+	props: ['state'],
+  data: function () {
+    return {
+			
+    }
+  },
+	methods:{
+		closeModal(){
+			document.querySelector('.modal-overlay.pwa').classList.toggle('active')
+			setTimeout(() => {this.creditOrDebit = null}, 500)
+		}
+	},
+	created(){
+		
+	},
+  template: `
+	<div class="modal-overlay.pwa">
+		<div class="modal">
+			<div class="modal-content">
+				<button @click="close">Ok e fechar</button>
+			</div>
+		</modal
+	</div>
+	`
+})
