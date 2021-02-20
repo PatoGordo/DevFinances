@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+		<link rel="shortcut icon" href="images/android-launchericon-48-48.png" type="image/x-icon">
     <title>Dev Finance$</title>
 
 		<meta name="theme-color" content="#21262d"/>
@@ -12,24 +13,7 @@
 			if('serviceWorker' in navigator) {
 				navigator.serviceWorker.register('service-worker.js');
 			};
-			var transactions = [{
-				id: 1,
-				description: 'Luz',
-				amount: -25000,
-				date: '2/02/2021'
-			},
-			{
-				id: 2,
-				description: 'Agua',
-				amount: -14000,
-				date: '5/02/2021'
-			},
-			{
-				id: 3,
-				description: 'Freela',
-				amount: 250000,
-				date: '10/02/2021'
-			}]
+			var transactions = []
 		</script>
 
 		<!-- Theme controler -->
@@ -47,7 +31,13 @@
 		<script src="https://cdn.jsdelivr.net/npm/vue-router"></script>
   </head>
   <body>
-		<div id="app">Loading</div><!-- All components will be rendered here. -->
+		<div id="app">
+			<div class="notload-screen" style="height: 100vh;display: flex;flex-direction: column;align-items: center;justify-content: center;">
+				<p style="font-size: 1.3rem;color: #F44336;margin-bottom: 1rem;">Erro ao carregar a pagina!</p>
+				<p style="color: #FFD54F;">Verifique sua conexão com a internet!</p>
+				<p style="color: #40C4FF;">Se o problema persistir <a color="color: #1E88E5 !important;" href="https://t.me/PatoGordo" target="_blank">me contate pelo telegram</a></p>
+			</div>
+		</div><!-- All components will be rendered here. -->
 		<script>document.body.classList.add(getTheme())</script>
 		
 		<!-- Components -->
@@ -55,7 +45,6 @@
 		<script src="Src/Components/navbar.vue.js"></script><!-- Navbar Component -->
 		<!-- Pages Components -->
 		<script src="Src/Pages/home.vue.js"></script>
-		<script src="Src/Pages/about.vue.js"></script>
 		<script src="Src/Pages/404.vue.js"></script>
 		<!-- Worker Components -->
     <script src="Src/router.js"></script><!-- Set your routes here -->
