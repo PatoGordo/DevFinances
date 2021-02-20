@@ -91,6 +91,7 @@ const Home = Vue.component('Home', {
 				Instalar aplicativo
 			</button>
 		</div>
+		<button @click="openModal()" class="add-button-fixed"><ion-icon name="add-outline"></ion-icon></button>
 		<footer>Dev Finances, by: <a href="https://github.com/patogordo" target="_blank">Pato Gordo</a></footer>
 	</div>`
 })
