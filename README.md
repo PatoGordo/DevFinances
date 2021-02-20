@@ -6,7 +6,7 @@
 
 > Um projetinho que fiz seguindo as aulas da [Maratona Discover](https://www.youtube.com/watch?v=NlDr6JX3VvA) do Mayk Brito.
 
-### ✨ [Demo](https://duck-dev-finances.vercel.app/#/)
+### ✨ [Demo](https://devfinances.tk/#/)
 
 ## Usage
 
