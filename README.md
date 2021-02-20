@@ -26,8 +26,8 @@ Rode o arquivo "index.html" no seu navegador.
 
 ## Ajude o projeto
 
-De uma estralinha(⭐️) se esse projeto re ajudou.
-Faça um [pull request](https://github.com/PatoGordo/DevFinances/pulls) contentendo novas implementações
+- Dando uma estralinha(⭐️) se esse projeto te ajudou.
+- Fazendo um [pull request](https://github.com/PatoGordo/DevFinances/pulls) contentendo novas implementações
 
 
 ***
