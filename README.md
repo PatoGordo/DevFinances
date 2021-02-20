@@ -1,4 +1,4 @@
-# Bom vindo ao Dev Finances 👋
+# Bem vindo ao Dev Finances 👋
 ![Version](https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
@@ -8,7 +8,7 @@
 
 ### ✨ [Demo](https://devfinances.tk/#/)
 
-## Usage
+## Como usar?
 
 ```sh
 Rode o arquivo "index.html" no seu navegador.
