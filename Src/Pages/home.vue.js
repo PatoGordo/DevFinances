@@ -90,8 +90,7 @@ const Home = Vue.component('Home', {
 				<ion-icon class="icon-button"></ion-icon>
 				Instalar aplicativo
 			</button>
-		</div>
 		<button @click="openModal()" class="add-button-fixed"><ion-icon name="add-outline"></ion-icon></button>
-		<footer>Dev Finances, by: <a href="https://github.com/patogordo" target="_blank">Pato Gordo</a></footer>
+		<footer style="width: min(80%, 420px)">Dev Finances, por: <a href="https://github.com/patogordo" target="_blank">Pato Gordo</a><br /><a href="https://patogordo.ga/#/feedback?lang=pt" target="_blank">Clique aqui</a> caso você queira me enviar um feedback reportando erros ou dando sua opinião sobre o projeto.</footer>
 	</div>`
 })
