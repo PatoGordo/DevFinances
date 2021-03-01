@@ -1,11 +1,11 @@
 const PWA = {
 	init(){
-		let deferredPrompt;
-		const addBtn = document.querySelector('.add-button');
+		let deferredPrompt
+		const addBtn = document.querySelector('.add-button')
 		const iconBtn = document.querySelector('.icon-button')
-		addBtn.style.display = 'none';
+		addBtn.style.display = 'none'
 
-		var mobileType = this.getMobileOperatingSystem();
+		var mobileType = this.getMobileOperatingSystem()
 		if( mobileType == "Android" ){
 			iconBtn.name = 'logo-google-playstore'
 		}else if( mobileType == "iOS" ){
@@ -16,17 +16,17 @@ const PWA = {
 
 		window.addEventListener('beforeinstallprompt', (e) => {
 			// Prevent Chrome 67 and earlier from automatically showing the prompt
-			e.preventDefault();
+			e.preventDefault()
 			// Stash the event so it can be triggered later.
-			deferredPrompt = e;
+			deferredPrompt = e
 			// Update UI to notify the user they can add to home screen
-			addBtn.style.display = 'flex';
+			addBtn.style.display = 'flex'
 
 			addBtn.addEventListener('click', (e) => {
 				// hide our user interface that shows our A2HS button
-				addBtn.style.display = 'none';
+				addBtn.style.display = 'none'
 				// Show the prompt
-				deferredPrompt.prompt();
+				deferredPrompt.prompt()
 				// Wait for the user to respond to the prompt
 				deferredPrompt.userChoice.then((choiceResult) => {
 					if (choiceResult.outcome === 'accepted') {
@@ -34,20 +34,20 @@ const PWA = {
 					} else {
 						addBtn.style.display = 'flex'
 					}
-					deferredPrompt = null;
-				});
-			});
-		});
+					deferredPrompt = null
+				})
+			})
+		})
 	},
 	getMobileOperatingSystem() {
-		var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+		var userAgent = navigator.userAgent || navigator.vendor || window.opera
 
 		if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) ){
-			return 'iOS';
+			return 'iOS'
 		}else if(userAgent.match( /Android/i )){
-			return 'Android';
+			return 'Android'
 		}else{
-			return 'unknown';
+			return 'unknown'
 		}
 	}
 }
@@ -102,7 +102,16 @@ const Transaction = {
 	},
 	total(){
 		return this.incomes() + this.expenses()
-	}
+	},
+	editTransaction(transaction, index) {
+    const items = Storage.get()
+    const itemsUpdated = items.map((item, i) => {
+      return (i == index) ? transaction : item
+    })
+
+    this.all = itemsUpdated
+    App.reload()
+  },
 }
 
 const Utils = {

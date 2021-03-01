@@ -20,6 +20,10 @@ const Home = Vue.component('Home', {
 		},
 		openModal(){
 			document.querySelector('.modal-overlay').classList.toggle('active')
+		},
+		openModalEdit(index){
+			document.querySelector('#edit-description').value = 
+			document.querySelector('.modal-overlay.edit').classList.toggle('active')
 		}
 	},
 	created() {
@@ -37,7 +41,7 @@ const Home = Vue.component('Home', {
 				<ion-icon class="header-icon" :id="isDark ? 'sun' : 'moon'" :name=" isDark ? 'sunny-outline' : 'moon-outline'"></ion-icon>
 			</div>
 			
-			<img class="logo" src="Src/Images/logo.svg" alt="Dev Finances">
+			<img @click="openModalEdit()" class="logo" src="Src/Images/logo.svg" alt="Dev Finances">
 		</header>
 		<main class="container">
 			<section class="balance">
@@ -85,6 +89,7 @@ const Home = Vue.component('Home', {
 			</section>
 		</main>
 		<dk-modal />
+		<dk-modal-edit />
 		<div class="button-div">
 			<button class="add-button">
 				<ion-icon class="icon-button"></ion-icon>
