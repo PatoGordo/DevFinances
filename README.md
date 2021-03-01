@@ -16,6 +16,12 @@ Rode o arquivo "index.html" no seu navegador.
 > recomendo rodar ele via localhost
 ```
 
+## ToDo
+- [x] Dark mode,
+- [ ] Editar transações,
+- [ ] Fazer uma versão online, que salve dados no firebase ou mongodb
+- [ ] Fazer autenticação e rotas seguras.
+
 ## Autor
 
 👤 **PatoGordo**
